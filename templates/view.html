@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{worksheet}}</title>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+    <style>
+    body {
+            background-image: url("../static/images/pawel-nolbert-291146.jpg");
+    } 
+     
+    </style>
+</head>
+
+<body>
+        <script type="text/javascript" 
+            src="http://public.tableau.com/javascripts/api/tableau_v8.js">
+        </script>
+        <script type="text/javascript">
+            function initViz() {
+                var containerDiv = document.getElementById("vizContainer"),
+                    url = "{{server}}/t/{{site}}/views/{{workbook}}/{{worksheet}}?:embed=y&:showAppBanner=false&:showShareOptions=true&:display_count=no&:showVizHome=no",
+
+                    options = {
+                        height:'930px',
+                        width:'1250px',
+                        hideTabs: true
+                    };
+                
+                var viz = new tableau.Viz(containerDiv, url, options); 
+            }
+        </script>
+</body>
+
+<body onload="initViz();">
+    <div id="vizContainer" style="width:1250px; height:930px; margin: 0 auto;"></div>    
+</body>
+
+</html>

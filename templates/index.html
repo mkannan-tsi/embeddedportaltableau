@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Embedded Portal</title>
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">    
+
+    <style>
+    body {
+            background-image: url("../static/images/pawel-nolbert-291146.jpg");
+    } 
+   
+    </style>
+</head>
+ 
+<body>
+    <div class="header" >
+        <h4> <font color = "red"> {{ state }} </font> </h4>
+        <h1> <font color = "white"> Javascript + REST API Example </font> </h1>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <div class="row marketing" style="width:600px; height: 600px; margin: auto;">
+            <form class="form-signin" method="post" action = "{{ url_for('loginToServer') }}" >
+                <br>
+                <h4> <font color="white"> Tableau Server Name </font> </h4>
+                <label for="inputName" class="sr-only">Tableau Server Name</label> 
+                <input type="name" name="inputServer" id="inputServer" class="form-control" placeholder="Server" value= "http://" required autofocus>
+                
+                <br><br>            
+                <br>
+                <h4> <font color="white"> Site Name (Leave Blank if Default) </font> </h4>
+                <label for="inputName" class="sr-only" style="color:white;">Site Name</label> 
+                <input type="name" name="inputSite" id="inputSite" class="form-control" placeholder="Site (Leave blank if Default)" value="" autofocus>
+                
+                <br><br>  
+                <br>
+                <h4> <font color="white"> Username </font> </h4>
+                <label for="inputName" class="sr-only" color="white">UserName</label> 
+                <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+                
+                <br><br>
+                <br>
+                <h4> <font color="white"> Password </font> </h4>
+                <label for="inputPassword" class="sr-only">Password</label> 
+                <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+                
+                <br><br>
+                <br>
+                <input type="submit" button id="btnLogin" class="btn btn-lg btn-primary btn-block"></button>
+                <br>
+                <br>
+            </form>
+ 
+        
+    <div>
+        <footer class="footer">
+            <h4> <font color = "white"> &copy; MK  </font> </h4>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>

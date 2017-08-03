@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Workooks</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+    <style>
+    body {
+            background-image: url("../static/images/pawel-nolbert-291146.jpg");
+    } 
+    a{
+      color: white;
+      font-size: 150%;
+      background-color: none;
+    }
+    a:link {
+        text-decoration: none;
+    }
+    a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+     
+    </style>
+  </head>
+ 
+  <body>
+    <div>
+        <h1> <font color = "white"> Workbooks </font> </h1>
+        <br>
+    </div>
+    <div class="row marketing" style="width:600px; margin: auto;">
+      <h4 id="demo"></h4>
+      <ul>
+          {% for n in workbook %}
+          <a href="{{url}}&workbook={{n}}">{{n}}</a>
+          <br>
+          {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
